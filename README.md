@@ -43,22 +43,22 @@ The following architecture diagram illustrates how the components of ReflexOS in
 ```mermaid
 flowchart TB
     %% Users and Frontend
-    User([User / Browser])
-    Frontend[React Frontend\n(Vite, Tailwind, Zustand)]
+    User(["User / Browser"])
+    Frontend["React Frontend\n(Vite, Tailwind, Zustand)"]
 
     %% Backend Service
-    Backend[Spring Boot Backend API\n(Java 17, Spring Security)]
+    Backend["Spring Boot Backend API\n(Java 17, Spring Security)"]
 
     %% Databases and Queues
-    PostgreSQL[(PostgreSQL\nRelational Data)]
-    Redis[(Redis\nCaching)]
-    Kafka[[Apache Kafka\nEvent Streaming]]
-    Qdrant[(Qdrant\nVector Database)]
+    PostgreSQL[("PostgreSQL\nRelational Data")]
+    Redis[("Redis\nCaching")]
+    Kafka[["Apache Kafka\nEvent Streaming"]]
+    Qdrant[("Qdrant\nVector Database")]
 
     %% AI Services
-    Ollama((Ollama\nLocal LLM Runner))
-    Llama3[Llama 3 Model]
-    Nomic[Nomic Embed Text]
+    Ollama(("Ollama\nLocal LLM Runner"))
+    Llama3["Llama 3 Model"]
+    Nomic["Nomic Embed Text"]
 
     %% Connections
     User -- "HTTP/REST & WebSockets" --> Frontend
